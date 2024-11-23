@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Text & Open App</title>
+  <script>
+    // Function to copy text to clipboard
+    function copyToClipboard() {
+      const text = "NABJR4VXJRDHFGHN"; // Customize your text here
+      navigator.clipboard.writeText(text).then(function() {
+        console.log('Text copied to clipboard!');
+      }, function(err) {
+        console.error('Error copying text: ', err);
+      });
+    }
+
+    // Function to open the app (replace with your app's deep link)
+    function openApp() {
+      window.location.href = 'https://deliveroo.it/it/'; // Replace with your deep link
+    }
+
+    // On page load, copy text and open app
+    window.onload = function() {
+      copyToClipboard();
+      openApp();
+    };
+  </script>
+</head>
+<body>
+  <h1>QR Code will copy text and open the app!</h1>
+</body>
+</html>
