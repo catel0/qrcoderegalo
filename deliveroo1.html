@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Code & Redirect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    #code {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px;
+      color: #007BFF;
+    }
+  </style>
+  <script>
+    // Function to copy code to clipboard
+    function copyToClipboard() {
+      const code = document.getElementById("code").innerText; // Get the text from the code element
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = code;
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      
+      alert("Code copied to clipboard!");
+
+      // Redirect the user to the next page after copying the code
+      window.location.href = "https://deliveroo.it/it/"; // Replace with the URL you want to redirect to
+    }
+  </script>
+</head>
+<body>
+  <h1>Copy the Code Below</h1>
+
+  <!-- The code to be copied -->
+  <div id="code">NABJR4VXJRDHFGHN</div>
+
+  <!-- Button to trigger the copy action -->
+  <button onclick="copyToClipboard()">Copy Code</button>
+
+  <p>Once copied, you will be redirected to another page.</p>
+</body>
+</html>
+
+
